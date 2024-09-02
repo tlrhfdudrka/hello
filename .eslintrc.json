@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "import"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "createDefaultProgram": true
+  },
+  "env": {
+    // 전역객체를 eslint가 인식하는 구간
+    "browser": true, // document나 window 인식되게 함
+    "node": true,
+    "es6": true
+  },
+  "ignorePatterns": ["node_modules/"], // eslint 미적용될 폴더나 파일 명시
+  "extends": [
+    "eslint-config-prettier",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier",
+    "next/core-web-vitals"
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    },
+    "import/parsers": { "@typescript-eslint/parser": [".ts"] }
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/react-in-jsx-scope": "off", // react 17부턴 import 안해도돼서 기능 끔 리액트 Import
+    "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }], // 경고표시, 파일 확장자를 .ts나 .tsx 모두 허용함
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": ["arrow-function", "function-declaration"] }
+    ]
+  }
 }

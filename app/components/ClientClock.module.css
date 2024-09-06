@@ -1,0 +1,28 @@
+/* ClientClock.module.css */
+
+.timeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* 각 박스 간의 간격 */
+}
+
+.timeBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* 글자 크기 */
+}
+
+.periodBox {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  padding-top: 11px;
+  /* text-align: center; */
+}
+
+.colon {
+  font-size: 2rem;
+  padding-bottom: 5px;
+}

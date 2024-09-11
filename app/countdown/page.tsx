@@ -165,7 +165,7 @@ const CountDown = () => {
             onClick={handleStartCountdown}
             disabled={isCountdownActive}
           >
-            완료
+            start
           </button>
         </div>
 

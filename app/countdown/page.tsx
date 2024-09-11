@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import styles from './CountDown.module.css';
+import styles from './countDown.module.css';
 
 const CountDown = () => {
   // const [years] = useState<number[]>([2024]); // 연도는 2024년으로 고정

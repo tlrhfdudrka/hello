@@ -1,23 +1,17 @@
-'use client';
+// 'use client';
 
 import styles from './page.module.css';
-import ClientClock from '@/components/ClientClock';
-import { useRouter } from 'next/navigation';
+import ClientClock from '@/app/components/ClientClock';
+import { getData } from '@/actions/todoAction';
+import Todos from '@/components/Todos/Todos';
 
-export default function Home() {
-  const router = useRouter();
-
-  const handleCountDownClick = () => {
-    router.push('/countdown');
-  };
+export default async function Home() {
+  const data = await getData();
 
   return (
     <div className={styles.wrap}>
       <ClientClock />
-      <button className={styles.button} onClick={handleCountDownClick}>
-        {' '}
-        카운트다운 설정
-      </button>
+      <Todos todos={data} />
     </div>
   );
 }

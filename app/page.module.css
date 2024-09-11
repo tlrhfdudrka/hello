@@ -5,11 +5,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.button {
-  margin-top: 20px;
-  padding: 5px 10px;
-  background-color: rgb(120, 125, 168);
-  border: 0px;
-  border-radius: 5px;
-}

@@ -1,0 +1,72 @@
+.todoList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  border-radius: 7px;
+  background: linear-gradient(
+    90deg,
+    rgb(123, 178, 236) 0%,
+    rgb(161, 158, 229) 80%
+  );
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 5px rgba(182, 182, 182, 0.5);
+}
+
+.checkBox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid white;
+  border-radius: 50%; /* 원형으로 만들기 */
+  position: relative;
+  cursor: pointer;
+}
+
+.checkBox:checked {
+  border: 1px solid white;
+  border-radius: 50%; /* 체크박스가 체크되도 원형 유지 */
+}
+
+.checkBox:checked::before {
+  content: '\f00c'; /* FontAwesome 체크 아이콘 */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* 두꺼운 아이콘 스타일 */
+  position: absolute;
+  font-size: 9px;
+  top: 2.8px;
+  left: 4px;
+  color: white;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-right: 15px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.7em;
+}
+
+.buttonWrap {
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.textBox {
+  padding: 5px;
+  margin: 10px 5px;
+  border: 0px;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}

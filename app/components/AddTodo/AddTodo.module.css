@@ -11,14 +11,14 @@
 }
 
 .button {
-  padding: 0; /* 패딩을 0으로 설정하여 버튼 크기를 정확히 맞춤 */
+  padding: 0;
   margin-right: 5px;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 50%; /* 완전한 동그라미로 만들기 위해 반지름을 50%로 설정 */
+  border-radius: 50%;
   color: rgb(100, 93, 232);
-  align-items: center; /* 세로 중앙 정렬 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  text-align: center; /* 텍스트 중앙 정렬 */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-size: 1.5em;
 }
